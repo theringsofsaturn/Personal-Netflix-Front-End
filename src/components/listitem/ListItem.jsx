@@ -1,11 +1,7 @@
-import "./listitem/listitem.scss"
+import "./listItem.scss";
 
 const ListItem = () => {
-    return (
-        <div className="listitem">
-            item
-        </div>
-    )
-}
+  return <div className="listItem">item</div>;
+};
 
-export default ListItem
+export default ListItem;
