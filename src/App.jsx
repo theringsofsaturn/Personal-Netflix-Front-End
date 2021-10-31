@@ -3,7 +3,7 @@ import Watch from "./pages/watch/Watch";
 import "./app.scss";
 
 const App = () => {
-  return <Home />;
+  return <Watch />;
 };
 
 export default App;
