@@ -33,15 +33,9 @@ const List = () => {
         <ArrowBackIosNewOutlinedIcon
           className="sliderArrow left"
           onClick={() => handleClick("left")} // on click function for arrow to slide 230 px left and right
+          style={{ display: !isMoved && "none" }} // if it's not moved it's gonna be none. So, at first we will not see the arrow at the left, but if we click the right arrow and move the slide, then isMoved === true, so we will see the left arrow and click to slide.
         />
         <div className="container" ref={listRef}>
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
           <ListItem />
           <ListItem />
           <ListItem />
