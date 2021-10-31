@@ -29,7 +29,7 @@ function Featured({ type }) {
         </div>
       )}
       <img
-        src="https://images.pexels.com/photos/6899260/pexels-photo-6899260.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+        src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2019/08/21/08/matrixfilmextra2008-22.jpg?width=1200"
         alt=""
       />
 
