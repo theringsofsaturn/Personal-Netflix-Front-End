@@ -18,6 +18,15 @@ const ListItem = () => {
           <ThumbUpAltOutlinedIcon/>
           <ThumbDownAltOutlinedIcon/>
         </div>
+        <div className="itemInfoTop">
+          <span>1 hour 36 mins</span>
+          <span className="limit">+16</span>
+          <span>1999</span>
+          <div className="desc">
+            lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip
+          </div>
+          <div className="genre">Action</div>
+        </div>
       </div>
     </div>
   );
