@@ -20,6 +20,7 @@ const Navbar = () => {
   console.log(isScrolled);
 
   return (
+    // if state is true is gonna be class navbar & scrolled, if it's false then just class navbar (which is transparent right now )
     <div className={isScrolled ? "navbar scrolled" : "navbar"}>
       <div className="container">
         <div className="left">
