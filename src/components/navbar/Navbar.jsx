@@ -7,8 +7,20 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { useState } from "react";
 
 const Navbar = () => {
+  //state for controling the navbar background color on scrolling
+  // when it's on the top it's gonna be false and when you scroll it's gonna be true
+  // so, it will be transparent on the top (false) and black when scrolling (true)
+  // you can check it in the console the pageyoffset
+  const [isScrolled, setIsScrolled] = useState(false);
+  // console.log(window.pageYOffset)
+  window.onscroll = () => {
+    setIsScrolled(window.pageYOffset === 0 ? false : true);
+    return () => (window.onscroll = null);
+  };
+  console.log(isScrolled);
+
   return (
-    <div className= "navbar"> 
+    <div className={isScrolled ? "navbar scrolled" : "navbar"}>
       <div className="container">
         <div className="left">
           <img
