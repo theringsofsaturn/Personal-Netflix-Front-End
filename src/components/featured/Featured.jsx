@@ -40,8 +40,7 @@ function Featured({ type }) {
         />
 
         <span className="desc">
-          lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit
-          amet, consectet
+        When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.
         </span>
         <div className="buttons">
           <button className="play">

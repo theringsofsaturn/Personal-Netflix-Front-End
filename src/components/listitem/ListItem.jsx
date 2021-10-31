@@ -1,5 +1,7 @@
 import "./listItem.scss";
 import "../list/List";
+import Trailer from "../../assets/trailer.mp4"
+import ReactPlayer from "react-player";
 import { useState } from "react";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import AddIcon from "@mui/icons-material/Add";
@@ -27,6 +29,9 @@ const ListItem = ({ index }) => {
   // (1*225) - 50 = 175px
   const [isHovered, setIsHovered] = useState(false);
 
+  // variable for video trailer
+  // const trailer = "https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0fd273d2c6d9a064f3ae35579b2bbdf&profile_id=139&oauth2_token_id=57447761";
+
   return (
     <div
       className="listItem"
@@ -40,25 +45,40 @@ const ListItem = ({ index }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+      {/* film cover image */}
       <img src="https://i.ytimg.com/vi/7L6BheyqeaM/maxresdefault.jpg" alt="" />
-      <div className="itemInfo">
-        <div className="icons">
-          <PlayArrowIcon />
-          <AddIcon />
-          <ThumbUpAltOutlinedIcon />
-          <ThumbDownAltOutlinedIcon />
-        </div>
-        <div className="itemInfoTop">
-          <span>1 hour 36 mins</span>
-          <span className="limit">+16</span>
-          <span>1999</span>
-          <div className="desc">
-            lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit
-            amet, consectetur adip
+
+      {/* if it's hovered --> just show this video and the information 
+      use <> (or container div) to wrapp it since it will complain because we are using two components here: video & itemInfo */}
+      {isHovered && (
+        <>
+          {/* video trailer */}
+          {/* <video src={Trailer} type="video/mp4" autoPlay={true} loop /> */}
+          <video autoPlay loop>
+            <source src={Trailer} type="video/mp4" />
+          </video>
+
+          {/* items info */}
+          <div className="itemInfo">
+            <div className="icons">
+              <PlayArrowIcon className="icon" />
+              <AddIcon className="icon" />
+              <ThumbUpAltOutlinedIcon className="icon" />
+              <ThumbDownAltOutlinedIcon className="icon" />
+            </div>
+            <div className="itemInfoTop">
+              <span>1 hour 14 mins</span>
+              <span className="limit">+16</span>
+              <span>1999</span>
+            </div>
+            <div className="desc">
+              When a beautiful stranger leads computer hacker Neo to a
+              forbidding underworld
+            </div>
+            <div className="genre">Action</div>
           </div>
-          <div className="genre">Action</div>
-        </div>
-      </div>
+        </>
+      )}
     </div>
   );
 };
