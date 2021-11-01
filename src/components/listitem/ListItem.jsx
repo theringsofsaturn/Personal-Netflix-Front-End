@@ -1,6 +1,6 @@
 import "./listItem.scss";
 import "../list/List";
-import Trailer from "../../assets/trailer.mp4"
+import Trailer from "../../assets/trailer.mp4";
 import ReactPlayer from "react-player";
 import { useState } from "react";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
